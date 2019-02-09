@@ -2,6 +2,7 @@
 
 namespace Thekavish\Loginlogger;
 
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 
 class LoginlogServiceProvider extends ServiceProvider
@@ -23,6 +24,6 @@ class LoginlogServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //$this->app->make('Thekavish\Loginlogger\LoginlogController');
+        Event::subscribe('Thekavish\Loginlogger\Listeners\LoginEventSubscriber');
     }
 }
