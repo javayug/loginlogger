@@ -2,29 +2,39 @@
 
 namespace Thekavish\Loginlogger\Listeners;
 
+use Illuminate\Events\Dispatcher;
+
 class LoginEventSubscriber
 {
     /**
      * Handle successful user login events.
      */
-    public function onUserLoginPassed($event) {}
+    public function onUserLoginPassed($event)
+    {
+        debug($event);
+    }
 
     /**
      * Handle failed user login events.
      */
-    public function onUserLoginFailed($event) {}
+    public function onUserLoginFailed($event)
+    {
+    }
 
     /**
      * Handle user logout events.
      */
-    public function onUserLogout($event) {}
+    public function onUserLogout($event)
+    {
+        debug($event);
+    }
 
     /**
      * Register the listeners for the subscriber.
      *
-     * @param  Illuminate\Events\Dispatcher  $events
+     * @param  Dispatcher $events
      */
-    public function subscribe($events)
+    public function subscribe(Dispatcher $events)
     {
         $events->listen(
             'Illuminate\Auth\Events\Authenticated',

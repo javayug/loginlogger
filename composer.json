@@ -25,7 +25,8 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Thekavish\\LoginLogger\\LoginlogServiceProvider"
+        "Thekavish\\LoginLogger\\LoginlogServiceProvider",
+        "Thekavish\\LoginLogger\\EventServiceProvider"
       ]
     }
   }
