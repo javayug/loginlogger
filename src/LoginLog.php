@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Thekavish\LoginLogger;
 
 use Illuminate\Database\Eloquent\Model;
 

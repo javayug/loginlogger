@@ -1,6 +1,7 @@
 <?php namespace Thekavish\Loginlogger;
 
 use Illuminate\Support\ServiceProvider;
+use Thekavish\LoginLogger\Listeners\LoginEventSubscriber;
 
 class LoginlogServiceProvider extends ServiceProvider
 {
@@ -12,6 +13,7 @@ class LoginlogServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadMigrationsFrom(__DIR__ . '/migrations');
+        \Event::subscribe(LoginEventSubscriber::class);
     }
 
     /**

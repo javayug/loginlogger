@@ -38,17 +38,17 @@ class LoginEventSubscriber
     {
         $events->listen(
             'Illuminate\Auth\Events\Authenticated',
-            'Thekavish\Loginlogger\Listeners\LoginEventSubscriber@onUserLoginPassed'
+            'Thekavish\LoginLogger\Listeners\LoginEventSubscriber@onUserLoginPassed'
         );
 
         $events->listen(
             'Illuminate\Auth\Events\Failed',
-            'Thekavish\Loginlogger\Listeners\LoginEventSubscriber@onUserLoginFailed'
+            'Thekavish\LoginLogger\Listeners\LoginEventSubscriber@onUserLoginFailed'
         );
 
         $events->listen(
             'Illuminate\Auth\Events\Logout',
-            'Thekavish\Loginlogger\Listeners\LoginEventSubscriber@onUserLogout'
+            'Thekavish\LoginLogger\Listeners\LoginEventSubscriber@onUserLogout'
         );
     }
 
